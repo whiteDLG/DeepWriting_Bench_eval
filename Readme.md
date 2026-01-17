@@ -3,7 +3,13 @@
 > conda create -n wb python=3.11 <br>
 > pip install -r requirements.txt 
 
-## 2.启动vLLM
+## 2.下载模型
+请先建立一个文件夹，命名为:"`model`"<br>
+接下来需要从huggingface中下载对应模型到`model`文件夹内<br>
+最终模型存储路径应该为`model/huggingface/...`<br>
+`huggingface`文件夹内放置所有模型相关文件。<br>
+
+## 3.启动vLLM
 <p>
 vLLM用于提升模型推理效率。部署前需依据使用者本地设备情况调整核心参数，随后启动服务。<br>
 </p>
@@ -25,7 +31,7 @@ vLLM用于提升模型推理效率。部署前需依据使用者本地设备情�
 <br>
 ![启动成功](./data/figure/启动vllm.png)
 
-## 3.采样
+## 4.采样
 
 ### 参数修改
 需修改的文件为：<b>`generate_response.py`</b><br>
@@ -58,7 +64,7 @@ vLLM用于提升模型推理效率。部署前需依据使用者本地设备情�
 
 ![问题](./data/figure/问题.png)
 
-## 4.LLM打分
+## 5.LLM打分
 ### 参数修改
 需修改的文件为：<b>`evaluate_benchmark.py`</b><br>
 需要修改的参数为：
@@ -83,7 +89,7 @@ vLLM用于提升模型推理效率。部署前需依据使用者本地设备情�
 当进行LLM评分时，可以关闭前面启动的vLLM，不会影响后续步骤。
 
 
-### 5.执行文件calculate_scores.py得到结果
+### 6.执行文件calculate_scores.py得到结果
 ### 参数修改
 需修改的文件为：<b>`calculate_scores.py`</b><br>
 需要修改的参数为：
