@@ -24,7 +24,7 @@ vLLM用于提升模型推理效率。部署前需依据使用者本地设备情�
 
 ### 命令行启动
 > conda activate wb<br>
-> cd deepwriting <br>
+> cd DeepWriting_Bench_eval <br>
 > bash qwen3_8b_start.sh
 
 启动成功显示如下：<br>
@@ -111,3 +111,4 @@ vLLM用于提升模型推理效率。部署前需依据使用者本地设备情�
 <br>
 
 ![最终结果](./data/figure/最终结果.png)
+
